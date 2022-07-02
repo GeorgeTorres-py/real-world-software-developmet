@@ -63,3 +63,17 @@ class ImageImporter implements Importer {
 	}
 	
 }
+
+//ex4.5 define a constant
+public static final String PATH = "name/to/path"
+	
+	
+//ex4.6 registering imports
+	
+	private final Map<String, Importer> extensionToImporter = new HasMap<>();
+
+	public DocumentManagementSytem() {
+	    extensionToImporter.put("letter", new LetterImporter());	
+	    extensionToImporter.put("report", new ReportImporter());	
+	    extensionToImporter.put("jpg", new ImageImporter());	
+}
