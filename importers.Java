@@ -28,3 +28,20 @@ public class DocumentManagementSystem {
 	}
 
 }
+//ex4.2
+interface Importer {
+	Document importFile(File file) throws IOException;
+}
+//ex4.3
+public class Document {
+	private final Map<String, String> attributes;
+	
+	Document(final Map<String, String>attributes) {
+		this.attributes = attributes;
+	}
+	
+	public String getAttribute(final String attributeName) {
+		return attributes.get(attributeName);
+	}
+	
+}
